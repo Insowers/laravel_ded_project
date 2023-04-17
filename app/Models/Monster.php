@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Monster extends Model
 {
     use HasFactory;
+
+    public function weapon() {
+        return $this->belongsToMany(Weapon::class);
+    }
+
+    public function spell() {
+        return $this->belongsToMany(Spell::class);
+    }
 }

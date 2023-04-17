@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('monsters_spells', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedBigInteger('monster_id');
-            $table->unsignedBigInteger('spell_id');  
-            $table->foreign('monster_id')->references('id')->on('monsters');
-            $table->foreign('spell_id')->references('id')->on('spells');
+            $table->integer('id_monster')->unsigned();
+            $table->integer('id_spell')->unsigned();  
+            $table->foreign('id_monster')->references('id_monster')->on('monsters');
+            $table->foreign('id_spell')->references('id_spell')->on('spells');
+            $table->primary(['id_monster', 'id_spell']);
         });
     }
 
