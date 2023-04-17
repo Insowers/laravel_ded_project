@@ -11,10 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('weapons', function (Blueprint $table) {
+        Schema::create('monsters', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('damage');
+            $table->integer('str');
+            $table->integer('dex');
+            $table->integer('con');
+            $table->integer('int');
+            $table->integer('wis');
+            $table->integer('cha');
+            $table->integer('AC');
+            $table->integer('HP');
         });
     }
 
@@ -23,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('weapons');
+        Schema::dropIfExists('monsters');
     }
 };
