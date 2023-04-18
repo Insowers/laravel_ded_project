@@ -10,7 +10,7 @@ class Monster extends Model
     use HasFactory;
 
     public function weapon() {
-        return $this->belongsToMany(Weapon::class);
+        return $this->belongsToMany(Weapon::class)->withPivot('quantities');
     }
 
     public function spell() {
