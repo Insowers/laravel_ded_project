@@ -12,9 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('spells', function (Blueprint $table) {
-            $table->increments('id_spell');
-            //$table->primary('id_spell');
-            $table->string('name_spell');
+            $table->id();
+            $table->string('name');
         });
     }
 

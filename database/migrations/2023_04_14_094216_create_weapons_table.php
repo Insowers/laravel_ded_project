@@ -12,9 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('weapons', function (Blueprint $table) {
-            $table->increments('id_weapon');
-            //$table->primary('id_weapon');
-            $table->string('name_weapon');
+            $table->id();
+            $table->string('name');
             $table->string('damage');
         });
     }

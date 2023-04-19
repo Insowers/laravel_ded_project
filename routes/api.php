@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/monsters',[MonsterController::class, 'index']);
+
+Route::get('/name_list',[MonsterController::class, 'name_list']);
