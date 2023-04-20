@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class MonsterController extends Controller
 {
-    public function index()
+    public function monsters_all_data()
         {
             $monsters = Monster::with('weapons')->get();
             return $monsters;
