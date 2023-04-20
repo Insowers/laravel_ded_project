@@ -13,7 +13,7 @@ class Monster extends Model
         return $this->belongsToMany(Weapon::class)->withPivot('quantity');
     }
 
-    public function spell() {
+    public function spells() {
         return $this->belongsToMany(Spell::class);
     }
 }
