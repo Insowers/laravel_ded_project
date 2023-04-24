@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 
 class MonsterController extends Controller
 {
-    public function name_list() {
-        $monsters_names = Monster::select('id','name')->get();
-        return $monsters_names;
+    public function loading_data() {
+        $loading_data = Monster::select('id','name')->get();
+        return $loading_data;
     }
 
     /* public function index() {

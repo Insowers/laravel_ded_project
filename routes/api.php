@@ -24,4 +24,4 @@ Route::get('/monster/{id}',MonsterController::class, 'single_monster_data'); */
 
 Route::apiResource('monsters', MonsterController::class);
 
-Route::get('/name_list',[MonsterController::class, 'name_list']);
+Route::get('/loading_data',[MonsterController::class, 'loading_data']);
