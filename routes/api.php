@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\MonsterController;
 use App\Models\Monster;
+use App\Models\Weapon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,3 +26,7 @@ Route::get('/monster/{id}',MonsterController::class, 'single_monster_data'); */
 Route::apiResource('monsters', MonsterController::class);
 
 Route::get('/loading_data',[MonsterController::class, 'loading_data']);
+
+Route::get('/loading_weapons',function(){
+    return Weapon::all();
+    });
