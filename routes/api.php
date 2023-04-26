@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\MonsterController;
 use App\Models\Monster;
+use App\Models\Spell;
 use App\Models\Weapon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -29,4 +30,8 @@ Route::get('/loading_data',[MonsterController::class, 'loading_data']);
 
 Route::get('/loading_weapons',function(){
     return Weapon::all();
+    });
+
+Route::get('/loading_spells',function(){
+    return Spell::all();
     });

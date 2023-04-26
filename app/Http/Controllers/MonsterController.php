@@ -18,6 +18,7 @@ class MonsterController extends Controller
         $monsters = Monster::with('weapons')->get();
         return $monsters;
     } */
+    
 
     public function show($id) {
         $single_monster_data = Monster::with('weapons','spells')->findOrFail($id);
