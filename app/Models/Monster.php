@@ -14,6 +14,6 @@ class Monster extends Model
     }
 
     public function spells() {
-        return $this->belongsToMany(Spell::class);
+        return $this->belongsToMany(Spell::class)->withPivot('quantity');
     }
 }
