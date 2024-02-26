@@ -35,3 +35,7 @@ Route::get('/loading_weapons',function(){
 Route::get('/loading_spells',function(){
     return Spell::all();
     });
+
+Route::delete('/dlt_monster', [MonsterController::class, 'delete']);
+
+Route::post('/upd_monster', [MonsterController::class, 'store']);

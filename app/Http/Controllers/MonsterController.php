@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Monster;
+use Illuminate\Http\Request;
 
 class MonsterController extends Controller
 {
@@ -15,4 +16,18 @@ class MonsterController extends Controller
         $single_monster_data = Monster::with('weapons','spells')->findOrFail($id);
         return $single_monster_data;
     } 
+
+    public function store(Request $request)
+    {
+        $name = $request->input('name');
+ 
+        print_r($name);
+
+    }
+
+    public function delete($id) {
+        $monster_to_delete = Monster::where('id',$id)->delete();
+
+        print_r($monster_to_delete);
+    }
 }
