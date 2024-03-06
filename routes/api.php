@@ -36,6 +36,6 @@ Route::get('/loading_spells',function(){
     return Spell::all();
     });
 
-Route::delete('/dlt_monster', [MonsterController::class, 'delete']);
+Route::delete('/dlt_monster/{id}', [MonsterController::class, 'delete']);
 
 Route::post('/upd_monster', [MonsterController::class, 'store']);
